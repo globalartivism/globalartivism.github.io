@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+html,body {
+    margin:0;
+    padding:0;
+}
+
+body {
+    background: rgb(36, 199, 177);
+    font-family: "basic-sans", sans-serif;
+}
+
+#banner {
+    height: 100vh;
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+#banner h1 {
+    color: white;
+    font-size:140px;
+    width: fit-content;
+    font-weight: 900;
+}
