@@ -44,6 +44,13 @@ body {
     margin: 0 auto;
 }
 
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+
 .eyebrow {
     margin-bottom:0;
     display:block;
@@ -188,7 +195,48 @@ body {
 
 #exhibitions a:link,
 #exhibitions a:visited {
+
 }
+
+.exhibition .artist {
+    font-size: 3rem;
+}
+
+.exhibition .date-time {
+    font-weight: 600;
+    color: var(--artivism-orange);
+    font-size:2rem;
+}
+
+.exhibition .content {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+
+.exhibition .content > div {
+    flex: 2 1 0;
+}
+
+.exhibition .events {
+    border-top: 2px solid var(--artivism-teal);
+    margin-top: 4rem;
+}
+
+.exhibition .event + .event {
+    border-top: 1px solid rgba(255,255,255,0.125);
+}
+
+.exhibition .event h2 {
+    margin-top:0;
+}
+
+.exhibition .event .eyebrow {
+    margin-bottom:0;
+    color: var(--artivism-orange);
+}
+
 
 @media screen and (min-width: 600px) {
     #introduction {
@@ -210,8 +258,10 @@ body {
         font-size: 6vi;
     }
 
-    #introduction {
+    #introduction,
+    .exhibition .content {
         flex-direction: row;
+        gap: 2rem;
     }
 
     #provocation {
