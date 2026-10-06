@@ -47,12 +47,24 @@ body {
 .eyebrow {
     margin-bottom:0;
     display:block;
+    font-style: normal;
 }
 
-.eyebrow a {
+.eyebrow a::before {
+    content: "// ";
+}
+.eyebrow a:link,
+.eyebrow a:visited {
     color: var(--artivism-teal);
     text-decoration:none;
 }
+
+.eyebrow a:hover,
+.eyebrow a:focus,
+.eyebrow a:active {
+    color: white;
+}
+
 
 .eyebrow + h1 {
     margin-top:0;
@@ -61,6 +73,7 @@ body {
 #banner {
     display:flex;
     flex-wrap: nowrap;
+    flex-direction: column;
     padding: 4rem 2rem;
     margin-bottom: 2rem;
     justify-content: space-between;
@@ -76,7 +89,7 @@ body {
 }
 
 #banner nav a + a:before {
-    content: " / ";
+    content: "// ";
     color: rgba(0, 179, 164, 0.5);
     padding: 0 1rem;
 }
@@ -97,7 +110,7 @@ body {
 }
 
 #main h1 {
-    font-size: 100px;
+    font-size: 60px;
     letter-spacing: 2px;
     font-weight: 900;
     line-height: 1;
@@ -105,21 +118,17 @@ body {
 
 #introduction {
     display:flex;
+    flex-direction: column;
     flex-wrap: nowrap;
     gap: 4rem;
     padding: 0;
 }
 
-#provocation {
-    border-right: 1px solid rgba(255,255,255,0.5);
-    padding-right: 4rem;
-}
-
 #provocation h1 {
     font-family: var(--artivism-headings);
     font-weight: 900;
-    font-size: 200px;
     line-height: 0.75;
+    font-size: 24vi;
     color: var(--artivism-teal);
     margin-top:0;
     margin-bottom:0;
@@ -179,4 +188,38 @@ body {
 
 #exhibitions a:link,
 #exhibitions a:visited {
+}
+
+@media screen and (min-width: 600px) {
+    #introduction {
+        gap: 2rem;
+    }
+    #provocation {
+        padding-right: 2rem;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+
+    #banner {
+        flex-direction: row;
+    }
+
+    #main h1 {
+        font-size: 6vi;
+    }
+
+    #introduction {
+        flex-direction: row;
+    }
+
+    #provocation {
+        border-right: 1px solid rgba(255,255,255,0.5);
+        padding-right: 4rem;
+    }
+
+    #provocation h1 {
+        font-size: 12vi;
+    }
 }
