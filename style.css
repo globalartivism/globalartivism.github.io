@@ -10,7 +10,7 @@
     --artivism-teal: rgb(0, 179, 164);
     --artivism-blue: #0066ff;
     --artivism-purple: #9b4dff;
-    --artivism-black: #111;
+    --artivism-black: #000;
     --artivism-dark-gray: #1a1a1a;
     --artivism-medium-gray: #2e2e2e;
     --artivism-offwhite: #f5f1e6;
@@ -276,6 +276,14 @@ img {
 
     #banner {
         flex-direction: row;
+    }
+
+    .about #main {
+        padding-right: 440px;
+        background-image: url('/assets/about.jpg');
+        background-position: 100% 250px;
+        background-repeat: no-repeat;
+        background-size: 400px;
     }
 
     #main h1 {
