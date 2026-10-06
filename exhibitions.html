@@ -10,6 +10,7 @@ bodyclass: exhibitions
     <a href="{{ exhibition.url }}" id="{{ exhibition.slug }}">
         <h2>{{ exhibition.title }}</h2>
         <p>{{ exhibition.artist }}</p>
+        <p class="date-time"><span class="dt-start">{{ exhibition.date-start | date: "%B %-d, %Y" }}</span>—<span class="dt-end">{{ exhibition.date-end | date: "%B %-d, %Y"}}</span></p>
     </a>
 {% endfor %}
 </div>

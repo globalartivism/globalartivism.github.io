@@ -179,9 +179,9 @@ img {
     gap: 4rem;
 }
 
-#exhibitions h1 {
-    margin:0;
-    padding:0;
+#exhibitions h2 {
+    margin-bottom:0;
+    line-height:1;
 }
 
 #exhibitions a {
