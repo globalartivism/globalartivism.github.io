@@ -123,6 +123,14 @@ img {
     line-height: 1;
 }
 
+.about #main p:first-child strong:first-of-type {
+    display:block;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--artivism-purple);
+    line-height: 1.25;
+}
+
 #introduction {
     display:flex;
     flex-direction: column;
