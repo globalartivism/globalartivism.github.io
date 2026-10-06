@@ -9,7 +9,7 @@ bodyclass: exhibitions
 {% for exhibition in site.exhibitions %}
     <a href="{{ exhibition.url }}" id="{{ exhibition.slug }}">
         <h2>{{ exhibition.title }}</h2>
-        <p>{{ exhibition.summary }}</p>
+        <p>{{ exhibition.artist }}</p>
     </a>
 {% endfor %}
 </div>

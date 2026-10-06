@@ -185,12 +185,24 @@ img {
 }
 
 #exhibitions a {
-    background: var(--artivism-teal);
+    background-color: var(--artivism-teal);
+    background-position: 120% 0;
+    background-repeat: no-repeat;
     color: white;
     flex: 1;
     display:block;
     text-decoration:none;
     padding: 1rem;
+    background-size: contain;
+    font-size:90%;
+}
+
+#exhibitions #raíces-de-una-argentina-afro {
+    background-image: url('/assets/gabymessina-linkbg.png');
+}
+
+#exhibitions #pura-diversidad {
+    background-image: url('/assets/mirtatoledo-linkbg.png');
 }
 
 #exhibitions a:link,
