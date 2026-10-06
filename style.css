@@ -205,10 +205,22 @@ img {
     background-image: url('/assets/mirtatoledo-linkbg.png');
 }
 
+#exhibitions a {
+    transition: all 0.3s ease;
+}
+
 #exhibitions a:link,
 #exhibitions a:visited {
 
 }
+
+#exhibitions a:hover,
+#exhibitions a:focus,
+#exhibitions a:active{
+    transform: translateY(-1rem);
+    box-shadow: 10px 10px 0 rgba(0, 179, 164, 0.5);
+}
+
 
 .exhibition .artist {
     font-size: 3rem;
