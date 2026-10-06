@@ -1,0 +1,15 @@
+---
+layout: default
+title: Exhibitions
+bodyclass: exhibitions
+---
+
+<h1>Exhibitions</h1>
+<div id="exhibitions">
+{% for exhibition in site.exhibitions %}
+    <a href="{{ exhibition.url }}" id="{{ exhibition.slug }}">
+        <h2>{{ exhibition.title }}</h2>
+        <p>{{ exhibition.summary }}</p>
+    </a>
+{% endfor %}
+</div>

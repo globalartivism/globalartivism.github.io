@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<article class="exhibition h-event">
+    <header>
+        <em class="eyebrow"><a href="{{ site.baseurl }}/exhibitions">Exhibitions</a></em>
+        <h1 class="p-name">{{ page.title }}</h1>
+        <span class="dt-start">{{ page.date-start | date: "%B %-d, %Y" }}</span>—<span class="dt-end">{{ page.date-end | date: "%B %-d, %Y"}}</span>
+    </header>
+    <div class="content p-summary">
+        {{ content }}
+    </div>
+    <div class="events">
+        {% for event in page.events %}
+        <div class="event">
+            <h2>{{ event.title }}</h2>
+            <p><span class="date">{{ event.date | date: "%B %-d, %Y" }}</span>{% if event.time %} · <span class="time">{{ event.time }}</span>{% endif %}</p>
+            <p class="p-summary">{{ event.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</article>

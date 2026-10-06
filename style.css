@@ -1,3 +1,29 @@
+@import url(https://fonts.bunny.net/css?family=bebas-neue:400|montserrat:300,300i,600,600i|playfair-display:400,400i,600,600i,900,900i);
+
+/** Variables **/
+:root {
+
+    /* colors */
+    --artivism-red: #ff006e;
+    --artivism-orange: #ff7a00;
+    --artivism-yellow: #ffc629;
+    --artivism-teal: rgb(0, 179, 164);
+    --artivism-blue: #0066ff;
+    --artivism-purple: #9b4dff;
+    --artivism-black: #000000;
+    --artivism-dark-gray: #1a1a1a;
+    --artivism-medium-gray: #2e2e2e;
+    --artivism-offwhite: #f5f1e6;
+
+    /* fonts */
+    --artivism-headings: 'Bebas Neue', display;
+    --artivism-subheadings: 'Playfair Display', serif;
+    --artivism-text: 'Montserrat', sans-serif;
+
+
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -8,22 +34,139 @@ html,body {
 }
 
 body {
-    background: rgb(36, 199, 177);
-    font-family: "basic-sans", sans-serif;
+    background-color: var(--artivism-black);
+    color: var(--artivism-offwhite);
+    font: 20px/1.75 var(--artivism-text);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    margin-bottom:0;
+    display:block;
+}
+
+.eyebrow a {
+    color: var(--artivism-teal);
+    text-decoration:none;
+}
+
+.eyebrow + h1 {
+    margin-top:0;
 }
 
 #banner {
-    height: 100vh;
     display:flex;
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+}
+
+#banner p,
+#banner nav {
+    color: white;
+    font-size:20px;
+    width: fit-content;
+    display:flex;
+    margin:0;
+}
+
+#banner nav a + a:before {
+    content: " / ";
+    color: rgba(0, 179, 164, 0.5);
+    padding: 0 1rem;
+}
+
+#banner nav a:link,
+#banner nav a:visited {
+    color: white;
+    text-decoration:none;
+}
+
+#banner nav a:hover,
+#banner nav a:focus {
+    color: var(--artivism-teal);
+}
+
+#main {
     padding: 2rem;
 }
 
-#banner h1 {
-    color: white;
-    font-size:140px;
-    width: fit-content;
+#introduction {
+    display:flex;
+    flex-wrap: nowrap;
+    gap: 4rem;
+    padding: 0;
+}
+
+#provocation {
+    border-right: 1px solid rgba(255,255,255,0.5);
+    padding-right: 4rem;
+}
+
+#provocation h1 {
+    font-family: var(--artivism-headings);
     font-weight: 900;
+    font-size: 200px;
+    line-height: 0.75;
+    color: var(--artivism-teal);
+    margin-top:0;
+    margin-bottom:0;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: space-around;
+    justify-content: space-between;
+}
+
+#provocation em {
+    font-style: normal;
+    display: block;
+    margin:0;
+}
+
+#provocation em:first-child {
+    color: var(--artivism-red);
+}
+
+#provocation em:last-child {
+    color: var(--artivism-yellow);
+}
+
+#summary {
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#summary p {
+    margin:0;
+}
+
+#exhibitions {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 4rem;
+}
+
+#exhibitions h1 {
+    margin:0;
+    padding:0;
+}
+
+#exhibitions a {
+    background: var(--artivism-teal);
+    color: white;
+    flex: 1;
+    display:block;
+    text-decoration:none;
+    padding: 1rem;
+}
+
+#exhibitions a:link,
+#exhibitions a:visited {
 }

@@ -1,0 +1,43 @@
+# Global Site Information
+title: Global ARTivism
+url: "https://global-artivism.com"
+baseurl: ""
+
+# Jekyll Settings
+permalink: /:categories/:title/
+exclude: ['readme.md', '.gitignore', '.sass-cache', 'Gemfile', 'Gemfile.lock']
+show_drafts: false
+plugins: ['jekyll-sitemap']
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Collections
+collections:
+  exhibitions:
+    output: true
+    permalink: /exhibitions/:title/
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      bodyclass: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      bodyclass: "post"
+  -
+    scope:
+      path: ""
+      type: "exhibitions"
+    values:
+      layout: "exhibition"
+      bodyclass: "exhibition"
